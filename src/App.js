@@ -1,24 +1,45 @@
-import React from 'react'
-import logo from './logo.svg'
+import React, { useReducer } from 'react'
 import './App.css'
 
-function App () {
+import { Container, Col, ProgressBar, Button } from 'react-bootstrap'
+import { reducer, INITIAL_STATE, ACTION_TYPES } from './reducer'
+
+import questions from './questions.json'
+
+function App() {
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE)
+
+  const {
+    questionIndex,
+    currentScore,
+    maxScore,
+    minScore,
+    quizFinished
+  } = state
+
+  const currentProgress = ((questionIndex + 1) / questions.length) * 100
+
+  const handleAnotherTime = () => dispatch({ type: ACTION_TYPES.ANOTHER_QUIZ })
+
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container fluid>
+        <Col xs={12} sm={10} md={8} lg={6} xl={4} className='frame__container'>
+          <ProgressBar now={currentProgress} className='progres__bar' />
+
+          {quizFinished ? (
+            <div className='finish__container'>
+              <p className='finish-text'>
+                Quiz finished, your score is : {currentScore.toFixed(2)}
+              </p>
+
+              <Button onClick={handleAnotherTime}>Another Time</Button>
+            </div>
+          ) : (
+            <p>question component</p>
+          )}
+        </Col>
+      </Container>
     </div>
   )
 }
