@@ -1,8 +1,6 @@
 # CHANGES
 
-## 1. building the Question component (first phase), there could be another phase of refactoring and double checking the logic
-
-> ## The shuffling algorithm used is Fisher-Yates (aka Knuth) Shuffle.
+## 1. built the score progress in the bottom of the app with colorful colors
 
 ## To reevaluate
 

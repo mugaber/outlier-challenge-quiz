@@ -31,7 +31,7 @@ function App() {
           {quizFinished ? (
             <div className='finish__container'>
               <p className='finish-text'>
-                Quiz finished, your score is : {currentScore.toFixed(2)}
+                Quiz finished, your score is : {currentScore.toFixed(2)}%
               </p>
 
               <Button onClick={handleAnotherTime}>Another Time</Button>
@@ -39,6 +39,19 @@ function App() {
           ) : (
             <Question state={state} dispatch={dispatch} />
           )}
+
+          <div className='score-progress__container'>
+            <div className='score-progress__status'>
+              <p>Score: {currentScore.toFixed(0)}%</p>
+              <p>Max Score: {maxScore.toFixed(0)}%</p>
+            </div>
+
+            <ProgressBar className='score-progress__bar'>
+              <ProgressBar variant='danger' now={minScore} />
+              <ProgressBar variant='success' now={currentScore - minScore} />
+              <ProgressBar variant='warning' now={maxScore - currentScore} />
+            </ProgressBar>
+          </div>
         </Col>
       </Container>
     </div>

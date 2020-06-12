@@ -4,10 +4,31 @@
 
   min-height: 700px;
   border: 4px solid var(--light-grey);
+
+  position: relative;
 }
 
 .progres__bar {
   border-radius: 0 !important;
+}
+
+.score-progress__container {
+  bottom: 0;
+  position: absolute;
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
+.score-progress__status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: 1.5rem;
+}
+
+.score-progress__bar {
+  height: 1.5rem !important;
 }
 
 .finish__container {
