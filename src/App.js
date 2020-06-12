@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 import './App.css'
 
+import Question from './components/Question'
 import { Container, Col, ProgressBar, Button } from 'react-bootstrap'
 import { reducer, INITIAL_STATE, ACTION_TYPES } from './reducer'
 
@@ -24,7 +25,7 @@ function App() {
   return (
     <div>
       <Container fluid>
-        <Col xs={12} sm={10} md={8} lg={6} xl={4} className='frame__container'>
+        <Col xs={12} sm={10} md={8} lg={6} xl={5} className='frame__container'>
           <ProgressBar now={currentProgress} className='progres__bar' />
 
           {quizFinished ? (
@@ -36,7 +37,7 @@ function App() {
               <Button onClick={handleAnotherTime}>Another Time</Button>
             </div>
           ) : (
-            <p>question component</p>
+            <Question state={state} dispatch={dispatch} />
           )}
         </Col>
       </Container>

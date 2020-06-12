@@ -1,5 +1,9 @@
 # CHANGES
 
-## 1. planning application, some cleansing and some basic layout measurments
+## 1. building the Question component (first phase), there could be another phase of refactoring and double checking the logic
 
-## 2. created reducer as per the complex state interactions and some calculations
+> ## The shuffling algorithm used is Fisher-Yates (aka Knuth) Shuffle.
+
+## To reevaluate
+
+The benifits of using `answeredQuestionsCount` insread of using `questionIndex`

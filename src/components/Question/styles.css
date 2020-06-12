@@ -1,0 +1,32 @@
+.question__container {
+  margin: 1.5rem 3rem;
+}
+
+.stars__container {
+  position: relative;
+  top: -1rem;
+}
+
+.question-text {
+  margin: 1rem 0;
+  /* to avoid changing the choices position frequently */
+  min-height: 4.5rem;
+}
+
+.answer__container {
+  /* margin was causing issues !! */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0 !important;
+}
+
+.response__container {
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.next-button__container {
+  padding: 0.6rem 1.5rem;
+}
