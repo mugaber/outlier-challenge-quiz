@@ -1,0 +1,11 @@
+.score-progress__status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: 1.5rem;
+}
+
+.score-progress__bar {
+  height: 1.5rem !important;
+}

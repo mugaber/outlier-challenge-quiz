@@ -1,0 +1,60 @@
+.frame__container {
+  margin: 1rem auto;
+  padding: 0rem !important;
+
+  min-height: 750px;
+  border: 4px solid var(--light-grey);
+
+  position: relative;
+
+  box-shadow: 4px 4px 10px 0.5px var(--light-grey);
+}
+
+.progress__bar {
+  border-radius: 0 !important;
+}
+
+.question-number__header {
+  margin: 1.5rem 3rem 0.5rem;
+}
+
+.response__container {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  /* for user convenience and to avoid distracting the user by the dynamic position of the button */
+  width: 100%;
+  bottom: 13rem;
+  position: absolute;
+}
+
+.next-button__container {
+  padding: 0.6rem 1.5rem;
+}
+
+.score-progress__container {
+  bottom: 0;
+  position: absolute;
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
+.finish__container {
+  display: flex;
+  margin: 9rem 2rem;
+
+  height: 50vh;
+  padding: 2rem;
+
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 10px;
+  border: 2px solid var(--light-grey);
+}
+
+.finish-text {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}

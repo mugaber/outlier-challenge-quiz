@@ -1,5 +1,5 @@
 .question__container {
-  margin: 1.5rem 3rem;
+  margin: 0 3rem;
 }
 
 .question-category {
@@ -24,15 +24,4 @@
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   padding: 0 !important;
-}
-
-.response__container {
-  margin: 3rem;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.next-button__container {
-  padding: 0.6rem 1.5rem;
 }
