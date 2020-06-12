@@ -2,10 +2,12 @@
   margin: 1rem auto;
   padding: 0rem !important;
 
-  min-height: 700px;
+  min-height: 750px;
   border: 4px solid var(--light-grey);
 
   position: relative;
+
+  box-shadow: 4px 4px 10px 0.5px var(--light-grey);
 }
 
 .progres__bar {

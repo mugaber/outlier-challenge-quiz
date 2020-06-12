@@ -2,9 +2,15 @@
   margin: 1.5rem 3rem;
 }
 
+.question-category {
+  color: #999;
+  position: relative;
+  top: -0.2rem;
+}
+
 .stars__container {
   position: relative;
-  top: -1rem;
+  top: -1.3rem;
 }
 
 .question-text {
@@ -21,7 +27,7 @@
 }
 
 .response__container {
-  margin: 2rem;
+  margin: 3rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;

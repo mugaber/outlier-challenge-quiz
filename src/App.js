@@ -20,7 +20,7 @@ function App() {
 
   const currentProgress = ((questionIndex + 1) / questions.length) * 100
 
-  const handleAnotherTime = () => dispatch({ type: ACTION_TYPES.ANOTHER_QUIZ })
+  const handleAnotherQuiz = () => dispatch({ type: ACTION_TYPES.ANOTHER_QUIZ })
 
   return (
     <div>
@@ -31,10 +31,10 @@ function App() {
           {quizFinished ? (
             <div className='finish__container'>
               <p className='finish-text'>
-                Quiz finished, your score is : {currentScore.toFixed(2)}%
+                Quiz finished, your score is : {currentScore.toFixed(0)}%
               </p>
 
-              <Button onClick={handleAnotherTime}>Another Time</Button>
+              <Button onClick={handleAnotherQuiz}>Another Time</Button>
             </div>
           ) : (
             <Question state={state} dispatch={dispatch} />

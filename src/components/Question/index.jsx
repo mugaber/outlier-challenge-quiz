@@ -98,7 +98,7 @@ function Question({ state, dispatch }) {
         Question {questionIndex + 1} of {questionsLength}
       </h3>
 
-      <p style={{ color: '#999' }}>
+      <p className='question-category'>
         {decodeURIComponent(currentQuestion.category)}
       </p>
 

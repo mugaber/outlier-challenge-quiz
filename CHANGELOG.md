@@ -1,7 +1,7 @@
 # CHANGES
 
-## 1. built the score progress in the bottom of the app with colorful colors
+**some styling changes**
 
 ## To reevaluate
 
-The benifits of using `answeredQuestionsCount` insread of using `questionIndex`
+The benefits of using `answeredQuestionsCount` with `questionIndex` while one can do the other.
