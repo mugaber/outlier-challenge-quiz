@@ -20,15 +20,13 @@ const INITIAL_STATE = {
   currentScore: 0,
   maxScore: 100,
   minScore: 0,
-  quizFinished: false
+  isQuizFinished: false
 }
 
-function reducer(state, action) {
+function reducer (state, action) {
   const {
-    QUESTIONS_LENGTH,
-    questionIndex,
-    correctAnswersCount,
-    answeredQuestionsCount
+    QUESTIONS_LENGTH, questionIndex,
+    correctAnswersCount, answeredQuestionsCount
   } = state
 
   switch (action.type) {
@@ -68,7 +66,7 @@ function reducer(state, action) {
       return { ...state, currentScore, maxScore, minScore }
 
     case ACTION_TYPES.FINISH_QUIZ:
-      return { ...state, quizFinished: true }
+      return { ...state, isQuizFinished: true }
 
     case ACTION_TYPES.ANOTHER_QUIZ:
       return INITIAL_STATE

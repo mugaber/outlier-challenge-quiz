@@ -1,23 +1,34 @@
-function shuffleAnswers(answers) {
-  let answersCopy = [...answers]
+/**
+ * @param {Array} The array to shuffle
+ * @returns {Array} Returns the new shuffled array
+ */
 
-  let currentIndex = answersCopy.length,
-    temporaryValue,
-    randomIndex
+function shuffleAnswers (answers) {
+  const result = [...answers]
+
+  let currentIndex = result.length
+  let temporaryValue
+  let randomIndex
 
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
     currentIndex--
 
-    temporaryValue = answersCopy[currentIndex]
-    answersCopy[currentIndex] = answersCopy[randomIndex]
-    answersCopy[randomIndex] = temporaryValue
+    temporaryValue = result[currentIndex]
+    result[currentIndex] = result[randomIndex]
+    result[randomIndex] = temporaryValue
   }
 
-  return answersCopy
+  return result
 }
 
-function calculateNewScore({
+/**
+ * @param {Object} Containing number of questions answered, correct answers count
+ * and the questions length
+ * @returns {Object} Containing the current score, max score and min score.
+ */
+
+function calculateNewScore ({
   answeredQuestionsCount,
   correctAnswersCount,
   QUESTIONS_LENGTH
@@ -26,8 +37,7 @@ function calculateNewScore({
     QUESTIONS_LENGTH <= 0 ||
     correctAnswersCount < 0 ||
     answeredQuestionsCount < 0
-  )
-    return null
+  ) return null
 
   const currentScore =
     answeredQuestionsCount < 1
@@ -35,8 +45,7 @@ function calculateNewScore({
       : (correctAnswersCount * 100) / answeredQuestionsCount
 
   const maxScore =
-    ((QUESTIONS_LENGTH - (answeredQuestionsCount - correctAnswersCount)) *
-      100) /
+    ((QUESTIONS_LENGTH - answeredQuestionsCount + correctAnswersCount) * 100) /
     QUESTIONS_LENGTH
 
   const minScore = (correctAnswersCount * 100) / QUESTIONS_LENGTH

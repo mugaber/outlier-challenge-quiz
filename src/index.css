@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  --light-grey: #bbb;
+  --light-grey: #ccc;
 }

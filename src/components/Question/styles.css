@@ -1,11 +1,12 @@
 .question__container {
-  margin: 0 3rem;
+  margin: 0 4rem;
 }
 
 .question-category {
   color: #999;
+  font-size: .9rem;
   position: relative;
-  top: -0.2rem;
+  top: -0.1rem;
 }
 
 .stars__container {
@@ -14,14 +15,53 @@
 }
 
 .question-text {
-  margin: 1rem 0;
   /* to avoid changing the choices position frequently */
+  /* for making the space the same for any question only use margin */
   min-height: 4.5rem;
+  margin-bottom: .5rem;
 }
 
-.answer__container {
-  /* margin was causing issues !! */
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  padding: 0 !important;
+.answers__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.answer-button {
+  padding: .5rem;
+  margin: 1.3em 0;
+  flex-basis: 45%;
+  font-size: 14px;
+}
+
+/* RESPONSIVE QUERIES */
+
+
+/* MOBILE */
+
+@media only screen and  (max-width: 550px) {
+  .question__container {
+    margin: 0 2rem;
+  }
+
+  .stars__container {
+    height: 15px;
+  }
+
+  .question-text {
+    font-size: 18px;
+    min-height: 0;
+    margin-bottom: 1rem;
+  }
+
+  .answers__container {
+    margin-top: 0;
+  }
+
+  .answer-button {
+    flex-basis: 100%;
+    font-size: 12px;
+    margin: .6rem 0;
+  }
 }

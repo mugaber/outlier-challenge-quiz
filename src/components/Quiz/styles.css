@@ -1,8 +1,9 @@
-.frame__container {
+.quiz__container {
   margin: 1rem auto;
   padding: 0rem !important;
 
-  min-height: 750px;
+  width: 620px;
+  height: 750px;
   border: 4px solid var(--light-grey);
 
   position: relative;
@@ -15,18 +16,20 @@
 }
 
 .question-number__header {
-  margin: 1.5rem 3rem 0.5rem;
+  margin: 2rem 4rem 0.3rem;
 }
 
 .response__container {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
 
-  /* for user convenience and to avoid distracting the user by the dynamic position of the button */
   width: 100%;
-  bottom: 13rem;
-  position: absolute;
+  margin-top: 2rem;
+
+  /* for user convenience and to avoid distracting by the dynamic position we can use this position */
+  /* bottom: 12rem; */
+  /* position: absolute; */
 }
 
 .next-button__container {
@@ -57,4 +60,38 @@
 .finish-text {
   font-size: 1.3rem;
   margin-bottom: 2rem;
+}
+
+/* RESPONSIVE QUERIES */
+
+/* TABLET */
+
+@media only screen and (max-width: 655px) {
+  .quiz__container {
+    margin: 0 auto;
+    width: 90vw;
+    height: 100vh;
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 550px) {
+  .quiz__container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .question-number__header {
+    margin: 1rem 2rem;
+  }
+
+  .response__container {
+    margin-top: 0;
+  }
+
+  .finish-text {
+    font-size: 15px;
+  }
 }
